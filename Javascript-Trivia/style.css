@@ -1,0 +1,102 @@
+/* div containing all quiz items */
+.quiz-carousel {
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* div containing individual quiz items */
+.quiz-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* div containing unordered list for all quiz items */
+.quiz-carousel__track-container {
+    background: lightblue;
+    padding: 50px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* unordered list for all quiz items */
+.quiz-carousel__track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+/* list items containing questions */
+.quiz-carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.quiz-question {
+    padding: 0 50px;
+    font-size: 40px;
+}
+
+.quiz-answers {
+    list-style: none;
+}
+
+/* 'previous' and 'next' buttons */
+.quiz-carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+/* 'previous' button */
+.quiz-carousel__button-left {
+    left: -40px;
+}
+
+/* 'next' button */
+.quiz-carousel__button-right {
+    right: -40px;
+}
+
+/* icon for 'previous' and 'next' buttons */
+.quiz-carousel__button img {
+    width: 12px;
+}
+
+/* div containing bottom navigation */
+.quiz-carousel__nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+/* individual navigation items */
+.quiz-carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba(0,0,0,.3);
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+/* active navigation item indicator */
+.quiz-carousel__indicator.current-slide {
+    background: rgba(0,0,0,.75);
+}
+
+.is-hidden {
+    display: none;
+}
