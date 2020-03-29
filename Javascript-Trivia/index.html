@@ -6,49 +6,59 @@
     <title>Git Happens Quiz</title>
 
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap Stylesheet -->
     <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
         crossorigin="anonymous">
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    <!-- Bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
                 crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
                 integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
                 crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
                 integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
                 crossorigin="anonymous"></script>
+
+    <!-- Knockout.js Script -->
+    <script src="knockout-3.5.1.js"></script>
+
 </head>
 <body>
 
     <div id="carousel-quiz" class="carousel slide" data-interval="false" data-ride="carousel">
         <div class="carousel-inner">
+
+        <!-- Question 1 -->
           <div class="carousel-item active">
             <div class="card mx-auto text-center bg-dark text-white">
                 <div class="card-header">Question 1</div>
                 <div class="card-body mx-auto">
-                    <h3 class="card-title">Did this work?</h3>
+                    <h3 class="card-title">What is 2+2?</h3>
                 
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                          <input type="radio" name="options" id="option1" checked> Yes
+                          <input type="radio" name="question1" id="option1" value="1" checked> 1
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2"> No
+                          <input type="radio" name="question1" id="option2" value="2"> 2
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3"> Maybe
+                          <input type="radio" name="question1" id="option3" value="3"> 3
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="option4"> idk
+                            <input type="radio" name="question1" id="option4" value="4"> 4
                         </label>
                     </div>
 
                 </div>
             </div>
           </div>
+          
+          <!-- Question 2 -->
           <div class="carousel-item">
             <div class="card text-center bg-dark text-white">
                 <div class="card-header">Question 2</div>
@@ -58,22 +68,24 @@
                 
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                          <input type="radio" name="options" id="option1" checked> Yes
+                          <input type="radio" name="question2" id="option1" value="yes" checked> Yes
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option2"> No
+                          <input type="radio" name="question2" id="option2" value="no"> No
                         </label>
                         <label class="btn btn-secondary">
-                          <input type="radio" name="options" id="option3"> Maybe
+                          <input type="radio" name="question2" id="option3" value="maybe"> Maybe
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="option4"> idk
+                            <input type="radio" name="question2" id="option4" value="idk"> idk
                         </label>
                     </div>
                     
                 </div>
             </div>
           </div>
+          
+          <!-- Question 3 -->
           <div class="carousel-item">
             <div class="card text-center bg-dark text-white">
                 <div class="card-header">Question 3</div>
@@ -83,18 +95,216 @@
 
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary active">
-                        <input type="radio" name="options" id="option1" checked> Yes
+                        <input type="radio" name="question3" id="option1" value="yes" checked> Yes
                         </label>
                         <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option2"> No
+                        <input type="radio" name="question3" id="option2" value="no"> No
                         </label>
                         <label class="btn btn-secondary">
-                        <input type="radio" name="options" id="option3"> Maybe
+                        <input type="radio" name="question3" id="option3" value="maybe"> Maybe
                         </label>
                         <label class="btn btn-secondary">
-                            <input type="radio" name="options" id="option4"> idk
+                            <input type="radio" name="question3" id="option4" value="idk"> idk
                         </label>
                     </div>
+                </div>
+
+                
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 4</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question4" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question4" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question4" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question4" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 5 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 5</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question5" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question5" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question5" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question5" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 6 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 6</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question6" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question6" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question6" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question6" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 7 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 7</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question7" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question7" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question7" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question7" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 8 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 8</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question8" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question8" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question8" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question8" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 9 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 9</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question9" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question9" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question9" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question9" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+                </div>
+
+                
+            </div>
+          </div>
+          
+          <!-- Question 10 -->
+          <div class="carousel-item">
+            <div class="card text-center bg-dark text-white">
+                <div class="card-header">Question 10</div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Did this work?</h3>
+
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                        <input type="radio" name="question10" id="option1" value="yes" checked> Yes
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question10" id="option2" value="no"> No
+                        </label>
+                        <label class="btn btn-secondary">
+                        <input type="radio" name="question10" id="option3" value="maybe"> Maybe
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="question10" id="option4" value="idk"> idk
+                        </label>
+                    </div>
+
+                    <a href="#" class="btn btn-primary m-2" id="submit">Submit</a>
                 </div>
 
                 
@@ -250,7 +460,13 @@
         </div>
     </div> -->
 
-    <script>
+    <script type="text/javascript">
+
+        var answerViewModel = {
+            question1: ko.observable()
+        };
+
+        ko.applyBindings(answerViewModel);
 
     </script>
 </body>
