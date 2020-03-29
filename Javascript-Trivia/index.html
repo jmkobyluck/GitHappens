@@ -3,149 +3,443 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Javascript Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="quiz-carousel">
-        <button class="quiz-carousel__button quiz-carousel__button-left is-hidden">
-            <img src="Assets/back.svg" alt="">
-        </button>
-        <div class="quiz-carousel__track-container">
-            <ul class="quiz-carousel__track">
 
-                <!-- each question slide -->
-                <li class="quiz-carousel__slide current-slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 1</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+    <div id="car01" class="carousel slide" data-ride="carousel" data-wrap="false" data-interval="false" data-keyboard="true">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="8"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="9"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            
+            <!-- Question 1 -->
+            <div class="item active">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 1</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 1 of 10</p>
+                        </div>
                     </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 2</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 3</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 4</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 5</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 6</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 7</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 8</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 9</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="quiz-carousel__slide">
-                    <div class="quiz-container">
-                        <h3 class="quiz-question">Question 10</h3>
-                        <ul class="quiz-answers">
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <button class="quiz-carousel__button quiz-carousel__button-right">
-            <img src="Assets/next.svg" alt="">
-        </button>
+                </div>
+            </div>
 
-        <!-- bottom navigation indicators -->
-        <div class="quiz-carousel__nav">
-            <button class="quiz-carousel__indicator current-slide"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
-            <button class="quiz-carousel__indicator"></button>
+            <!-- Question 2 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 2</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 2 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 3</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 3 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 4</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 4 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 5</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 5 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 6</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 6 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 7</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 7 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 8</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 8 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 9</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 9 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="item">
+                <div class="col-md-2 col-xs-2"></div>
+                <div class="col-md-8 col-xs-8">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h4>Javascript Trivia</h4>
+                        </div>
+                        <div class="panel-body">
+                        <p>Question 10</p>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">Answer 1
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Answer 2
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Answer 3
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios4" value="option4">Answer 4
+                            </label>
+                        </div>
+            
+                        </div>
+                        
+                        <div class="panel-footer">
+                            <p>Question 10 of 10</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#car01" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#car01" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
     </div>
 
-    <script src="quiz-carousel.js"></script>
 </body>
 </html>
