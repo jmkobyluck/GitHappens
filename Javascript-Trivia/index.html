@@ -36,7 +36,7 @@
 
     <div class="container text-center">
         <br /><br />
-        <h2>JavaScript Trivia Quiz!</h2>
+        <h1 class="display-3">JavaScript Trivia Quiz!</h1>
         <br />
         <div id="carousel-quiz" class="carousel slide" data-interval="false">
 
@@ -80,9 +80,11 @@
                                         data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[3])}, text: answer[3]">
                                     </label>
                                 </div>
+
+                                <h3 class="correctMessage"><br />Correct</h3>
+                                <h3 class="incorrectMessage"><br />Incorrect</h3>
+                                <p class="incorrectMessage">Correct answer: <span data-bind="text: correctAnswer"></span></p>
                             </div>
-                            <h3 class="correctMessage">Correct</h3>
-                            <h3 class="incorrectMessage">Incorrect</h3>
                         </div>
                     </div>
                 </div>
