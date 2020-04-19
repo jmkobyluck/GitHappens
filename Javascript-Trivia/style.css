@@ -1,3 +1,28 @@
 /*.card {
     height: 100vh;
 } */
+
+
+.carousel-item .correctMessage, .carousel-item .incorrectMessage{
+    display:none;
+}
+
+.carousel-item .correctMessage{
+    color: green;
+}
+
+.carousel-item .incorrectMessage{
+    color: red;
+}
+
+.correct .correctMessage {
+    display: block;
+}
+
+.incorrect .incorrectMessage {
+    display: block;
+}
+
+.card-body {
+    max-height: 30%;
+}
