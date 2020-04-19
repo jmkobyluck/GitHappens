@@ -53,22 +53,22 @@
 
                 <div class="carousel-item" data-bind="foreach: quizQuestions">
                     <div class="card mx-auto text-center bg-dark text-white">
-                        <div class="card-header">Question <span data-bind="text: questionNumber"></span></div>
+                        <div class="card-header" data-bind="text: questionNumber"></div>
                         <div class="card-body mx-auto">
                             <h3 class="card-title" data-bind="text: question"></h3>
 
                             <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary" data-bind="text: answer[0], checked: checkedAnswer">
-                                    <input type="radio" name="question1" value="a">
+                                <label class="btn btn-secondary" data-bind="text: answer[0]">
+                                    <input type="radio" value="a" data-bind="attr: {name: questionNumber}, checked: checkedAnswer">
                                 </label>
-                                <label class="btn btn-secondary" data-bind="text: answer[1], checked: checkedAnswer">
-                                    <input type="radio" name="question1" value="b">
+                                <label class="btn btn-secondary" data-bind="text: answer[1]">
+                                    <input type="radio" value="b" data-bind="attr: {name: questionNumber}, checked: checkedAnswer">
                                 </label>
-                                <label class="btn btn-secondary" data-bind="text: answer[2], checked: checkedAnswer">
-                                    <input type="radio" name="question1" value="c">
+                                <label class="btn btn-secondary" data-bind="text: answer[2]">
+                                    <input type="radio" value="c" data-bind="attr: {name: questionNumber}, checked: checkedAnswer">
                                 </label>
-                                <label class="btn btn-secondary" data-bind="text: answer[3], checked: checkedAnswer">
-                                    <input type="radio" name="question1" value="d">
+                                <label class="btn btn-secondary" data-bind="text: answer[3]">
+                                    <input type="radio" value="d" data-bind="attr: {name: questionNumber}, checked: checkedAnswer">
                                 </label>
                             </div>
 
@@ -85,7 +85,7 @@
                     <div class="card-body mx-auto">
                         <h3 class="card-title">Submit results?</h3>
                         <button type="button" class="btn btn-primary" data-bind="click: $root.submit">Submit</button>
-                        <p></p>
+                        <p data-bind="text: numCorrect"></p>
                     </div>
                 </div>
             </div>
@@ -105,79 +105,6 @@
     </div>
 
 
-    <script type="text/javascript">
-
-        function quizViewModel() {
-            this.checkedAnswer = ko.observable();
-            this.numCorrect = ko.observable(0);
-
-            this.quizQuestions = ko.observableArray([
-                {questionNumber: 1,
-                question: "JavaScript was created at ____________ in the early days of the Web.",
-                answer: ["A. Netscape", "B. Sun Microsystems", "C. Oracle", "D. Mozilla"],
-                correctAnswer: "c"},
-
-                {questionNumber: 2,
-                question: "JavaScript is typically used to specify the ____________ of web pages.",
-                answer: ["A. behavior", "B. content", "C. presentation", "D. behavior, content, and presentation"],
-                correctAnswer: "c"},
-
-                {questionNumber: 3,
-                question: "In JavaScript a variable is a symbolic name for a:",
-                answer: ["A. value", "B. function", "C. constant", "D. method"],
-                correctAnswer: "c"},
-
-                {questionNumber: 4,
-                question: "One of the built-in features of JavaScript is the ability to:",
-                answer: ["A. concentrate strings", "B. match patterns", "c. control structures", "D. wrap objects"],
-                correctAnswer: "c"},
-
-                {questionNumber: 5,
-                question: "All numbers in JavaScript are represented as:",
-                answer: ["A. floating point values", "B. integer values", "C. numeric literals", "D. strings"],
-                correctAnswer: "c"},
-
-                {questionNumber: 6,
-                question: "A return statement may appear only within the:",
-                answer: ["A. body of a function", "B. return expression", "C. specified expression", "D. all of the above"],
-                correctAnswer: "c"},
-
-                {questionNumber: 7,
-                question: "To obtain the value of a property use the:",
-                answer: ["A. dot notation or square brackets", "B. curly braces or square brackets", "C. curly braces or dot notation", "D. dot notation or parentheses"],
-                correctAnswer: "c"},
-
-                {questionNumber: 8,
-                question: "Client-side JavaScript does not provide any way to _______arbitrary files on the clients computer.",
-                answer: ["A. write or delete", "B. delete or create", "C. write or animate", "D. animate or delete"],
-                correctAnswer: "c"},
-
-                {questionNumber: 9,
-                question: "The _____________ method was the first and only way to display computed text in a document.",
-                answer: ["A. document.write()", "B. document.get()", "C. write.document()", "D. document.return()"],
-                correctAnswer: "c"},
-
-                {questionNumber: 10,
-                question: "OnKeydown is an:",
-                answer: ["A. event handler", "B. invocation", "C. attribute", "D. access key"],
-                correctAnswer: "c"},
-            ]);
-
-            this.submit = function() {
-                for(var i=0; i<this.quizQuestions.length; i++) {
-                    if ( this.checkedAnswer === this.quizQuestions[i].correctAnswer ){
-                        this.numCorrect()++;
-                        checkedAnswer.style.color = "lightgreen";
-                    } else {
-                        checkedAnswer.style.color = "red";
-                    }
-                }
-            };
-
-        };
-
-        ko.applyBindings(new quizViewModel());
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
