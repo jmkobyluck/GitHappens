@@ -27,72 +27,106 @@
 
     <style>
         .card {
-            height: 100vh;
+            height: 50vh;
         }
     </style>
 
 </head>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Git Happens</span>
+    </nav>
 
-    <div id="carousel-quiz" class="carousel slide" data-interval="false" data-ride="carousel">
+    <div class="container text-center">
+        <br /><br />
+        <h2>JavaScript Trivia Quiz!</h2>
+        <br />
+        <div id="carousel-quiz" class="carousel slide" data-interval="false" data-ride="carousel">
 
-        <div class="carousel-inner">
+            <div class="carousel-inner">
 
-            <!-- Title Slide -->
-            <div class="carousel-item active">
-                <div class="card mx-auto text-center bg-dark text-white">
-                    <div class="card-body mx-auto">
-                        <h3 class="card-title">Git Happens Quiz</h3>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Question Slides -->
-
-            <!-- This div prevents the Bootstrap carousel active class from being applied to all slides at once. -->
-            <div data-bind="foreach: quizQuestions">
-                <div class="carousel-item" data-bind="attr: {id: 'question_' + id}">
+                <!-- Title Slide -->
+                <div class="carousel-item active">
                     <div class="card mx-auto text-center bg-dark text-white">
-                        <div class="card-header">Question <span data-bind="text: id"></span></div>
                         <div class="card-body mx-auto">
-                            <h3 class="card-title" data-bind="text: question"></h3>
-
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary"
-                                    data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[0])}, text: answer[0]">
-                                </label>
-                                <label class="btn btn-secondary"
-                                    data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[1])}, text: answer[1]">
-                                </label>
-                                <label class="btn btn-secondary"
-                                    data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[2])}, text: answer[2]">
-                                </label>
-                                <label class="btn btn-secondary"
-                                    data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[3])}, text: answer[3]">
-                                </label>
-                            </div>
+                            <h3 class="card-title">Start Quiz!</h3>
                         </div>
-                        <h3 class="correctMessage">Correct</h3>
-                        <h3 class="incorrectMessage">Incorrect</h3>
                     </div>
                 </div>
+
+                <!-- Question Slides -->
+
+                <!-- This div prevents the Bootstrap carousel active class from being applied to all slides at once. -->
+                <div data-bind="foreach: quizQuestions">
+                    <div class="carousel-item" data-bind="attr: {id: 'question_' + id}">
+                        <div class="card mx-auto text-center bg-dark text-white">
+                            <div class="card-header">Question <span data-bind="text: id"></span></div>
+                            <div class="card-body mx-auto">
+                                <h3 class="card-title" data-bind="text: question"></h3>
+
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary"
+                                        data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[0])}, text: answer[0]">
+                                    </label>
+                                    <label class="btn btn-secondary"
+                                        data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[1])}, text: answer[1]">
+                                    </label>
+                                    <label class="btn btn-secondary"
+                                        data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[2])}, text: answer[2]">
+                                    </label>
+                                    <label class="btn btn-secondary"
+                                        data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[3])}, text: answer[3]">
+                                    </label>
+                                </div>
+                            </div>
+                            <h3 class="correctMessage">Correct</h3>
+                            <h3 class="incorrectMessage">Incorrect</h3>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
-
+            <!-- Bootstrap Carousel Controls -->
+            <a class="carousel-control-prev" href="#carousel-quiz" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-quiz" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            
         </div>
 
-        <!-- Bootstrap Carousel Controls -->
-        <a class="carousel-control-prev" href="#carousel-quiz" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-quiz" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-        
+        <br /><br />
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Finish</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog-centered modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                Expert! You answered 10 out of 10 question correctly!
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
     </div>
+
 
     <script src="script.js"></script>
 </body>
