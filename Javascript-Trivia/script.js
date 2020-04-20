@@ -43,7 +43,7 @@ var quizViewModel = {
         {
             id: 4,
             question: "One of the built-in features of JavaScript is the ability to:",
-            answer: randomize(["concentrate strings", "match patterns", "control structures", "wrap objects"])
+            answer: randomize(["concatenate strings", "match patterns", "control structures", "wrap objects"])
         },
 
         {
