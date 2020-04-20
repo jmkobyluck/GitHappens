@@ -1,4 +1,3 @@
-
 var answerKey = [
     "Netscape",
     "behavior",
@@ -11,6 +10,8 @@ var answerKey = [
     "document.write()",
     "event handler"
 ];
+
+var correctAnswers = 0;
 
 function randomize(ar) {
     return ar
@@ -81,12 +82,14 @@ var quizViewModel = {
             answer: randomize(["event handler", "invocation", "attribute", "access key"])
         }
     ]),
+    correctAnswers: ko.observable(0),
     questionAnswered: function (ev, id, selectedAnswer) {
         const element = document.getElementById(`question_${id}`);
         if (element.classList.contains("correct") || element.classList.contains("incorrect"))
             return;
 
         if (answerKey[id - 1] === selectedAnswer) {
+            this.correctAnswers(this.correctAnswers() + 1)
             ev.target.style.backgroundColor = "green";
             if (!element.classList.contains("correct"))
                 document.getElementById(`question_${id}`).classList.add("correct");
@@ -99,7 +102,8 @@ var quizViewModel = {
             if (!element.classList.contains("incorrect"))
                 document.getElementById(`question_${id}`).classList.add("incorrect");
         }
+        console.log(this.correctAnswers())
     }
-};
+}
 
 ko.applyBindings(quizViewModel);
