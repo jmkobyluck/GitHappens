@@ -124,6 +124,38 @@
                         question
                         correctly!
                     </div>
+                    <div>
+                        <span data-bind="if: correctAnswers()===1">
+                            <h1>10%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===2">
+                            <h1>20%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===3">
+                            <h1>30%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===4">
+                            <h1>40%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===5">
+                            <h1>50%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===6">
+                            <h1>60%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===7">
+                            <h1>70%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===8">
+                            <h1>80%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===9">
+                            <h1>90%</h1>
+                        </span>
+                        <span data-bind="if: correctAnswers()===10">
+                            <h1>100%</h1>
+                        </span>
+                    </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
