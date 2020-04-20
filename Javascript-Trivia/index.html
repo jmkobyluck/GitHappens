@@ -25,24 +25,20 @@
     <!-- Knockout.js Script -->
     <script src="knockout-3.5.1.js"></script>
 
-    <style>
-        .card {
-            height: 50vh;
-        }
-    </style>
+    <style></style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 h1">Git Happens</span>
     </nav>
 
     <div class="container text-center">
         <br /><br />
-        <h2>JavaScript Trivia Quiz!</h2>
+        <h1 class="display-3">JavaScript Trivia Quiz!</h1>
         <br />
-        <div id="carousel-quiz" class="carousel slide" data-interval="false" data-ride="carousel">
+        <div id="carousel-quiz" class="carousel slide" data-interval="false">
 
             <div class="carousel-inner">
 
@@ -50,7 +46,12 @@
                 <div class="carousel-item active">
                     <div class="card mx-auto text-center bg-dark text-white">
                         <div class="card-body mx-auto">
-                            <h3 class="card-title">Start Quiz!</h3>
+                            <h3 class="card-title">Start</h3>
+                            <br /><br />
+                            <p class="card-text">
+                                Welcome to the Git Happens Trivia Quiz!<br />
+                                There are 10 questions, and there is no time limit.<br /><br/>
+                                Be careful! Once you choose an answer, you can't change it!</p>
                         </div>
                     </div>
                 </div>
@@ -79,9 +80,11 @@
                                         data-bind="event: { click: (node, ev) => $parent.questionAnswered(ev, id,answer[3])}, text: answer[3]">
                                     </label>
                                 </div>
+
+                                <h3 class="correctMessage"><br />Correct</h3>
+                                <h3 class="incorrectMessage"><br />Incorrect</h3>
+                                <p class="incorrectMessage">Correct answer: <span data-bind="text: correctAnswer"></span></p>
                             </div>
-                            <h3 class="correctMessage">Correct</h3>
-                            <h3 class="incorrectMessage">Incorrect</h3>
                         </div>
                     </div>
                 </div>
@@ -98,7 +101,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-
+            
         </div>
 
         <br /><br />
@@ -120,9 +123,8 @@
                         <span data-bind="if: correctAnswers() > 0 && correctAnswers() < 6">Beginner.</span>
                         <span data-bind="if: correctAnswers() >= 6 && correctAnswers() < 8">Novice.</span>
                         <span data-bind="if: correctAnswers() >= 8">Expert!</span>
-                        You answered <span data-bind="text: correctAnswers"></span> out of 10
-                        question
-                        correctly!
+                        You answered <span data-bind="text: correctAnswers"></span>0% correctly.<br /><br />
+                        Refresh the page to try again!
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
