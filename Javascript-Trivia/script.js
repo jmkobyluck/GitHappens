@@ -2,7 +2,7 @@ var answerKey = [
     "Netscape",
     "behavior",
     "value",
-    "concentrate strings",
+    "concantenate strings",
     "floating point values",
     "body of a function",
     "dot notation or square brackets",
